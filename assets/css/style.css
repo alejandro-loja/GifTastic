@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+.gif-plus-img{
+    border: 1px solid purple;
+    float: left;
+    margin: 5px;
+}
+
+.rating{
+    text-align: center;
+}
+
+.banner {
+   border-bottom: 2px solid rgb(25, 21, 84);
+   padding: 10px 5px;
+}
+
+.topics {
+    float: left;
+    width: 70%;
+    text-align: center;
+}
+
+button, #add-button {
+    margin: 2px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#add-button {
+    background-color: rgb(25, 21, 84);
+}
+
+.search-bar {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    border-left: 2px solid rgb(25, 21, 84);
+
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
