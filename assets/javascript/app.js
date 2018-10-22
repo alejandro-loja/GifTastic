@@ -47,17 +47,23 @@ $(document).ready(function () {
                     p.addClass("rating");
 
                     var gameImage = $("<img>");
-                    gameImage.attr("src", results[i].images.fixed_height.url);
+                    var animate = results[i].images.fixed_height.url
+                    var still = results[i].images.fixed_height_still.url;
+                    gameImage.attr("src", still);
+                    gameImage.attr("data-still", still);
+                    gameImage.attr("data-animate", animate);
+                    gameImage.addClass('gif');
+                    gameImage.attr('data-state', 'still');
 
                     gameDiv.append(gameImage);
                     gameDiv.append(p);
                     $("#gifs-appear-here").prepend(gameDiv);
                 }
+                toAnimate();
             }); //.then
         }); //click
     }
-    renderButtons();
-    addAjaxToButtons();
+
 
     $("#add-button").on("click", function (event) {
         event.preventDefault();
@@ -71,5 +77,22 @@ $(document).ready(function () {
             addAjaxToButtons();
         };
     });
+
+    function toAnimate() {
+        $(".gif").on("click", function () {
+            console.log('clicked');
+            var state = $(this).attr("data-state");
+            if (state === "still") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
+        });
+    };
+
+    renderButtons();
+    addAjaxToButtons();
 
 }); //the end
