@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log("ready!");
+    var hello = 0;
 
     var topics = ["Nintendo", "PlayStation", "Pong", "GameCube", "Television"];
 
@@ -85,7 +86,8 @@ $(document).ready(function () {
             if (state === "still") {
                 $(this).attr("src", $(this).attr("data-animate"));
                 $(this).attr("data-state", "animate");
-            } else {
+            }
+            else if (state === "animate") {
                 $(this).attr("src", $(this).attr("data-still"));
                 $(this).attr("data-state", "still");
             }
