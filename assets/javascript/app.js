@@ -21,6 +21,8 @@ $(document).ready(function () {
     function addAjaxToButtons() {
         $("button").on("click", function () {
 
+            $('#gifs-appear-here').empty();
+
             var game = $(this).attr("data-game");
             var apiKey = "&api_key=qJWbGgKs7abYfvr3kMg2GDV1FX7b9wvx"; //my key
             var limit = "&limit=10";
