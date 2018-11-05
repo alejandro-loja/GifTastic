@@ -7,6 +7,7 @@ The Webpages displays the following:
 - Displays ratings per pictures
   - Ex: *Rating: G*
 - Will add buttons based on user input
+...
 
 I also will use HTML attribute to store links for a still and animated version of the Giphys.
 Using JavaScript will allow me to interchange which version the user see when the use click on an image.
